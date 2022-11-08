@@ -2,12 +2,13 @@ import "./Form.css";
 
 const Form = (props) => {
   return (
-    <form>
+    <form className="form">
       <label>
         First Name:
         <input
           type={"text"}
           name={"firstname"}
+          value={props.firstname}
           onChange={props.changeStateHandler}
         ></input>
       </label>
@@ -16,6 +17,7 @@ const Form = (props) => {
         <input
           type={"text"}
           name={"lastname"}
+          value={props.lastname}
           onChange={props.changeStateHandler}
         ></input>
       </label>
@@ -24,13 +26,20 @@ const Form = (props) => {
         <input
           type={"number"}
           name={"phonenumber"}
+          value={props.phonenumber}
           onChange={props.changeStateHandler}
         ></input>
       </label>
       <label>
         Role:
-        <select name="role" onChange={props.changeStateHandler}>
-          <option value={""} selected disabled>Please choose a role</option>
+        <select
+          name="role"
+          value={props.role}
+          onChange={props.changeStateHandler}
+        >
+          <option value={""} defaultValue>
+            Please choose a role
+          </option>
           <option value={"teacher"}>Teacher</option>
           <option value={"student"}>Student</option>
         </select>
@@ -38,12 +47,15 @@ const Form = (props) => {
       <label>
         Message:
         <textarea
-        name="message"
+          name="message"
           placeholder="Enter your message here"
+          value={props.message}
           onChange={props.changeStateHandler}
         ></textarea>
       </label>
-      <button onClick={props.submitHandler}>Submit</button>
+      <div className="submitButton">
+        <button onClick={props.submitHandler}>Submit</button>
+      </div>
     </form>
   );
 };

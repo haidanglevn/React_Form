@@ -18,14 +18,53 @@ class App extends Component {
       [event.target.name]: event.target.value,
     });
   };
-  submitHandler = (event) => {
-    event.preventDefault();
-    console.log("submit");
+  resetStateHandler = () => {
+    this.setState({
+      firstname: "",
+      lastname: "",
+      phonenumber: "",
+      role: "",
+      message: "",
+      showPopup: false,
+    });
+  };
+  submitHandler = (e) => {
+    e.preventDefault();
+    this.setState({
+      showPopup: true,
+    });
+  };
+
+  closeModalHandler = () => {
+    this.setState({
+      showPopup: false,
+    });
+  };
+
+  popup = () => {
+    if (this.state.showPopup == true && <Popup />) {
+      return (
+        <Popup
+          firstname={this.state.firstname}
+          lastname={this.state.lastname}
+          phonenumber={this.state.phonenumber}
+          role={this.state.role}
+          message={this.state.message}
+          closeModalHandler={this.closeModalHandler}
+          resetStateHandler={this.resetStateHandler}
+        ></Popup>
+      );
+    }
   };
   render() {
     return (
       <div className="App">
         <Form
+          firstname={this.state.firstname}
+          lastname={this.state.lastname}
+          phonenumber={this.state.phonenumber}
+          role={this.state.role}
+          message={this.state.message}
           changeStateHandler={this.changeStateHandler}
           submitHandler={this.submitHandler}
         ></Form>
@@ -36,13 +75,7 @@ class App extends Component {
           role={this.state.role}
           message={this.state.message}
         ></View>
-        <Popup
-          firstname={this.state.firstname}
-          lastname={this.state.lastname}
-          phonenumber={this.state.phonenumber}
-          role={this.state.role}
-          message={this.state.message}
-        ></Popup>
+        <div>{this.popup()}</div>
       </div>
     );
   }
