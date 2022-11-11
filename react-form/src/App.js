@@ -6,32 +6,27 @@ import Popup from "./Popup";
 
 class App extends Component {
   state = {
-    firstname: "",
-    lastname: "",
-    phonenumber: "",
-    role: "",
-    message: "",
-    showPopup: false,
-  };
-  changeStateHandler = (event) => {
-    this.setState({
-      [event.target.name]: event.target.value,
-    });
-  };
-  resetStateHandler = () => {
-    this.setState({
+    note: {
       firstname: "",
       lastname: "",
       phonenumber: "",
       role: "",
       message: "",
-      showPopup: false,
+    },
+    showPopup: false,
+  };
+  changeStateHandler = (event) => {
+    this.setState({
+      note: { ...this.state.note, [event.target.name]: event.target.value },
     });
+  };
+  resetStateHandler = () => {
+    window.location.reload()
   };
   submitHandler = (e) => {
     e.preventDefault();
     this.setState({
-      showPopup: true,
+      showPopup: !this.state.showPopup,
     });
   };
 
@@ -45,11 +40,15 @@ class App extends Component {
     if (this.state.showPopup == true && <Popup />) {
       return (
         <Popup
+          /* Instead of doing this:
           firstname={this.state.firstname}
           lastname={this.state.lastname}
           phonenumber={this.state.phonenumber}
           role={this.state.role}
-          message={this.state.message}
+          message={this.state.message} */
+
+          /* DO THIS:  */
+          {...this.state.note}
           closeModalHandler={this.closeModalHandler}
           resetStateHandler={this.resetStateHandler}
         ></Popup>
@@ -60,21 +59,11 @@ class App extends Component {
     return (
       <div className="App">
         <Form
-          firstname={this.state.firstname}
-          lastname={this.state.lastname}
-          phonenumber={this.state.phonenumber}
-          role={this.state.role}
-          message={this.state.message}
+          {...this.state.note}
           changeStateHandler={this.changeStateHandler}
           submitHandler={this.submitHandler}
         ></Form>
-        <View
-          firstname={this.state.firstname}
-          lastname={this.state.lastname}
-          phonenumber={this.state.phonenumber}
-          role={this.state.role}
-          message={this.state.message}
-        ></View>
+        <View {...this.state.note}></View>
         <div>{this.popup()}</div>
       </div>
     );
