@@ -3,7 +3,13 @@ import "./Form.css";
 const Form = (props) => {
   return (
     <form className="form">
-      <label>
+      <div className="logo">
+        <img src={require("./assets/sticky-notes.png")}></img>
+      </div>
+      <div className="avatar">
+        <img src={require("./assets/smile.png")}></img>
+      </div>
+      <label htmlFor="firstname">
         First Name:
         <input
           type={"text"}
@@ -12,7 +18,7 @@ const Form = (props) => {
           onChange={props.changeStateHandler}
         ></input>
       </label>
-      <label>
+      <label htmlFor="lastname">
         Last Name:
         <input
           type={"text"}
@@ -21,30 +27,31 @@ const Form = (props) => {
           onChange={props.changeStateHandler}
         ></input>
       </label>
-      <label>
+      <label htmlFor="phonenumber">
         Phone Number:
         <input
-          type={"number"}
+          type={"tel"}
           name={"phonenumber"}
           value={props.phonenumber}
           onChange={props.changeStateHandler}
         ></input>
       </label>
-      <label>
+      <label htmlFor="role">
         Role:
         <select
           name="role"
           value={props.role}
           onChange={props.changeStateHandler}
         >
-          <option value={""} defaultValue>
+          <option value={""} defaultValue disabled>
             Please choose a role
           </option>
           <option value={"teacher"}>Teacher</option>
           <option value={"student"}>Student</option>
+          <option value={"other"}>Other</option>
         </select>
       </label>
-      <label>
+      <label htmlFor="message">
         Message:
         <textarea
           name="message"

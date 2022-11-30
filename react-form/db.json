@@ -1,0 +1,68 @@
+{
+  "notes": [
+    {
+      "id": 1,
+      "firstname": "New",
+      "lastname": "Man",
+      "phonenumber": "092130213",
+      "role": "teacher",
+      "message": "Please call me back it is urgent stuff"
+    },
+    {
+      "id": 2,
+      "firstname": "Your",
+      "lastname": "Student",
+      "phonenumber": "09221356734",
+      "role": "student",
+      "message": "I left my phone at school please help"
+    },
+    {
+      "id": 3,
+      "firstname": "Arara",
+      "lastname": "Bekko",
+      "phonenumber": "0726482910",
+      "role": "other",
+      "message": "Hey wanna hang out this weekends?"
+    },
+    {
+      "id": 4,
+      "firstname": "Arara",
+      "lastname": "Bekko",
+      "phonenumber": "0726482910",
+      "role": "other",
+      "message": "Hey wanna hang out this weekends?"
+    },
+    {
+      "firstname": "Dang",
+      "lastname": "Le",
+      "phonenumber": "469532490",
+      "role": "teacher",
+      "message": "dasdsadsadasdas",
+      "id": 5
+    },
+    {
+      "firstname": "Dang",
+      "lastname": "Le",
+      "phonenumber": "469532490",
+      "role": "teacher",
+      "message": "dasdsadsadasdas",
+      "id": 6
+    },
+    {
+      "firstname": "Dang",
+      "lastname": "Le",
+      "phonenumber": "469532490",
+      "role": "other",
+      "message": "Hey",
+      "id": 7
+    },
+    {
+      "firstname": "sadasd",
+      "lastname": "adsadasd",
+      "phonenumber": "0123912392319",
+      "role": "student",
+      "message": "yoyoyoyoyoyoyoyo",
+      "id": 8
+    }
+  ]
+}

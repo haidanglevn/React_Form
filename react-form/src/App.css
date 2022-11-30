@@ -7,4 +7,9 @@
 }
 
 
-
+.note {
+  background-color: aqua;
+  text-align: left;
+  width: 100vw;
+  padding-left: 200px;
+}

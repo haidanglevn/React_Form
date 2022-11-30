@@ -1,8 +1,26 @@
+.logo img {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  width: 100px;
+} 
+.logo img:hover {
+  transform: rotate(10deg);
+  cursor: pointer;
+}
+.avatar img {
+  position: fixed;
+  bottom: 10px;
+  left: 10px;
+  width: 100px;
+  border-radius: 50%;
+}
 .form {
   text-align: left;
-  padding: 20px;
+  padding: 2% 5% 5% 20%;
   height: 100vh;
-  font-size: 1.5em;
+  font-size: 1.2em;
+  background-color: #F6EE86;
 }
 .form > * {
   padding: 10px;
@@ -37,3 +55,5 @@ button {
   margin: auto;
   width: 80%;
 }
+
+/* green: 88D37F yellow:F6EE86 pink:E7889D */

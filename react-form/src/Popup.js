@@ -10,7 +10,6 @@ const Popup = (props) => {
         </span>
         <h1>Check you message before sending:</h1>
         <p>
-          {" "}
           <span></span> First Name: {props.firstname}
         </p>
         <p>Last Name: {props.lastname}</p>
@@ -18,7 +17,7 @@ const Popup = (props) => {
         <p>Role: {props.role}</p>
         <p>Message: {props.message}</p>
         <div className="popup-button">
-          <button className="yes" onClick={props.resetStateHandler}>
+          <button className="yes" onClick={props.postHandler}>
             Yes, I want to send it!
           </button>
           <button className="no" onClick={props.closeModalHandler}>

@@ -11,11 +11,12 @@
   font-size: 1em;
 }
 .popup-content {
-  background-color: #fefefe;
-  margin: 5% auto; /* 15% from the top and centered */
-  padding: 50px;
+  background-color: yellow;
+  margin: 5% 10%; 
+  padding: 5vw;
   border: 1px solid #888;
   width: 80%;
+  border-radius: 20px;
 }
 .popup-button {
   padding: 30px 0 0 0;

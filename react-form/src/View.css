@@ -1,25 +1,27 @@
+.title {
+  font-size: 3em;
+  padding: 30px;
+  text-align: center;
+}
+
 .view {
   height: 100%;
-  background-image: url("assets/notebook.png");
+  background-image: url("assets/paper.webp");
   background-repeat: no-repeat;
   background-position: center;
-  background-size: cover;
+  background-size: fill;
   text-align: left;
   padding-top: 10px;
-  padding-left: 160px;
-  font-size: 20px;
+  padding-left: 100px;
+  padding: 5% 100px;
   font-family: "Dancing Script";
-  line-height: 48px;
-
+  line-height: 50px;
 }
 p {
-    font-size: 1.5em;
+  font-size: 1.5em;
 }
 span {
   font-weight: bold;
-  font-family: 'Courier New', Courier, monospace;
-}
-#message {
-  line-height: 56px;
-  font-size: 0.75em;
+  /*   font-family: 'Courier New', Courier, monospace;
+ */
 }
